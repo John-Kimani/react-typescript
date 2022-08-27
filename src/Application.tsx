@@ -1,10 +1,10 @@
 import React from 'react'
 
-export interface Il
+export interface IApplicationProps {};
 
-const Application = () => {
+const Application: React.FC<IApplicationProps> = (props) => {
   return (
-    <div>Application</div>
+    <div>Application Entry file</div>
   )
 }
 
