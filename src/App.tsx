@@ -6,13 +6,18 @@ import { ToDo } from './model';
 const App: React.FC = () => {
 
   const [todo, setTodo] = useState<string>('');
-  const [todos,setTodos] = useState<ToDo[]>([])
+  const [todos,setTodos] = useState<ToDo[]>([]);
+
+
+  const handleAdd = (e: React.FormEvent) => {
+    e.preventDefault();
+  }
 
   console.log(todo)
 
   return  <div className="App">
     <span className='heading'>Taskify</span>
-    <InputField todo={todo} setTodo={setTodo}/>
+    <InputField todo={todo} setTodo={setTodo} handleAdd={handleAdd}/>
   </div>;
 }
 
