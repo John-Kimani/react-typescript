@@ -11,7 +11,7 @@ const AboutPage: React.FC<IAboutPageProps> = (props) => {
     useEffect(() => {
         if(number)
         {
-            setMessage('The number is' + number);
+            setMessage('The number is ' + number);
         }else {
             setMessage("There was no number provided")
         }

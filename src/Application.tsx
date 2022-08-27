@@ -10,7 +10,10 @@ const Application: React.FC<IApplicationProps> = (props) => {
   return <BrowserRouter>
   <Routes>
     <Route path='/' element={<HomePage />} />
-    <Route path='/about' element={<AboutPage />} />
+    <Route path='/about'>
+        <Route index element={<AboutPage />} />
+        <Route path=':number' element={<AboutPage />} />
+        </Route> 
     <Route path='/login' element={<LoginPage />} />
   </Routes>
   </BrowserRouter>;
