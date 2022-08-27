@@ -2,8 +2,11 @@ import React from 'react'
 import { BrowserRouter, Route, Routes } from 'react-router-dom'
 import HomePage from './pages/Home'
 import LoginPage from './pages/Login'
-import firebaseApp from './config/config'
 import AuthRoute from './component/AuthRoute'
+import { initializeApp } from 'firebase/app'
+import { config } from './config/config'
+
+initializeApp(config.firebaseConfig);
 
 export interface IApplicationProps {};
 
