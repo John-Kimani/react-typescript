@@ -17,6 +17,10 @@ const AuthRoute: React.FC<IAuthRouteProps> = (props) => {
     useEffect(() => {
         // subscribed to any changes on auth function
         AuthCheck();
+
+
+        //return a function that point back to auth function to prevent memory leaks and clear subscription
+        return () => AuthCheck();
     }, [])
 
     const AuthCheck = onAuthStateChanged(auth, (user) => {
