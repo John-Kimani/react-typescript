@@ -2,7 +2,7 @@
 
 Getting started project with react typescript bootstrapped  with [Create React App](https://github.com/facebook/create-react-app).
 
-The project on this branch is a user authentication project connected with the firebase platform.
+The project on this branch is a react routing project connected.
 
 
 ## Available Scripts
